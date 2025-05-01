@@ -44,6 +44,6 @@
       "interactive": true
     }
   },
-  "globalEnv": ["DATABASE_URL"],
+  "globalEnv": ["DATABASE_URL", "SUPABASE_URL", "SUPABASE_ANON_KEY"],
   "globalPassThroughEnv": ["NODE_ENV"]
 }

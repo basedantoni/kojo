@@ -1,6 +1,16 @@
-# Turborepo starter
+# Antho Repo Start
 
-This Turborepo starter is maintained by the Turborepo core team.
+This is a starter for Next.js + Expo applications
+
+## Current Tech Stack
+- React + Next.js
+- React Native + Expo
+- Supabase
+  - Auth + Postgres DB
+- tRPC + Tanstack Query (API + State management)
+- Drizzle + Zod (ORM)
+- Shadcn (web ui)
+- Unistyles (native ui)
 
 ## Using this example
 
@@ -18,8 +28,11 @@ This Turborepo includes the following packages/apps:
 
 - `docs`: a [Next.js](https://nextjs.org/) app
 - `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `@antho/api`: a tRPC API
+- `@antho/auth`: Supabase Authentication logic
+- `@antho/db`: a Drizzle database connector
+- `@antho/ui`: a Shadcn component library shared by both `web` and `docs` applications
+- `@antho/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `@repo/tsconfig`: `tsconfig.json`s used throughout the monorepo
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
@@ -32,12 +45,20 @@ This Turborepo has some additional tools already setup for you:
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
 
+### Environment
+
+This project requires a Postgres database connection string in the `.env`
+
+```
+cp .env.example .env
+```
+
 ### Build
 
 To build all apps and packages, run the following command:
 
 ```
-cd my-turborepo
+cd antho-repo
 pnpm build
 ```
 
@@ -46,7 +67,7 @@ pnpm build
 To develop all apps and packages, run the following command:
 
 ```
-cd my-turborepo
+cd antho-repo
 pnpm dev
 ```
 
@@ -60,7 +81,7 @@ Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo
 By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
 
 ```
-cd my-turborepo
+cd antho-repo
 npx turbo login
 ```
 
